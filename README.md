@@ -8,7 +8,7 @@
 매일 매일 한다.
 
 * 공부 리스트
-> TDD  
+> [TDD](https://github.com/hunihun/TIL/blob/main/tdd.md)  
 멀티모듈  
 Clean Architecture  
 CI/CD    
