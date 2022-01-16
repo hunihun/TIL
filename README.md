@@ -9,7 +9,7 @@
 
 * 공부 리스트
 > [TDD](https://github.com/hunihun/TIL/blob/main/tdd.md)  
-Multi Module  
+[Multi Module](https://github.com/hunihun/TIL/blob/main/MultiModule.md)   
 Clean Architecture  
 CI/CD    
 Coroutine  
