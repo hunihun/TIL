@@ -9,7 +9,7 @@
 
 * 공부 리스트
 > [TDD](https://github.com/hunihun/TIL/blob/main/tdd.md)  
-멀티모듈  
+Multi Module  
 Clean Architecture  
 CI/CD    
 Coroutine  
