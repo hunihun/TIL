@@ -34,6 +34,9 @@
     1. 코드의 재사용성 증가
     2. 빌드시간 단축
     
+1. 코드의 재사용성 증가
+ ![before](./image/multimodule/before_multimodule.png "링크 설명(title)을 작성하세요.")
+
 
 
 
