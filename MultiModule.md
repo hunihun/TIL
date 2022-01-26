@@ -41,14 +41,22 @@
 
 ![이미지2](image/multimodule/after.png)
 
-- CustomView 를 모듈화 하여 위와같이 A, B 모듈에 각각 종속시키게되면 일일이 찾아서 변경할 필요가 없어진다.
+- CustomView 를 모듈화 하여 A, B 모듈에 각각 종속시키게되면 일일이 찾아서 변경할 필요가 없어진다.
 
-1. 빌드시간 단축
+2. 빌드시간 단축
 
 ![이미지3](https://cdn-media-1.freecodecamp.org/images/JsR7H3b6U9J49HLLY6rV5BCsNnuCQIT0O4rx)
-([출처](https://www.freecodecamp.org/news/how-modularisation-affects-build-time-of-an-android-application-43a984ce9968))
 
-- 15,000개의 클래스를 하나의 Application 모듈에서 빌드했을때와 하나의 Application 모듈과 2개, 4개의 Library 모듈로 나누어 빌드했을때의 시간을 측정한 결과이다. Application 모듈만 변경 후 빌드했을 때 분리가 많이 되어있을수록 짧은 빌드시간을 확인할 수 있다. 하지만 Library 모듈을 변경했을 때 오히려 1분10초 보다 긴 1분 32초가 걸린다. 왜그럴까?
+
+- 15,000개의 클래스를 하나의 Application 모듈에서 빌드했을때와 하나의 Application 모듈과 2개, 4개의 Library 모듈로 나누어 빌드했을때의 시간을 측정한 결과이다. Application 모듈만 변경 후 빌드했을 때 분리가 많이 되어있을수록 짧은 빌드시간을 확인할 수 있다. 하지만 Library 모듈을 변경했을 때 오히려 1분10초 보다 긴 1분 32초가 걸린다. 왜그럴까?  
+
+![이미지3](image/multimodule/library_module.png)
+>Application 모듈은 Library 모듈에 종속되어 있기때문에 Library 모듈 빌드시 다시 컴파일 된다. 또한 Library 모듈은 빌드시 Debug Task 와 Release Task 가 모두 실행되어 Application 모듈보다 더 오랜 시간이 걸리게 된다.
+
+- gradle 파일의 설정과 Library 모듈의 변경시 매번 실행되는 Application 모듈의 크기를 줄이는 것으로 빌드 시간을 더 단축할 수 있다.  
+- (Library 모듈의 debug 와 release flavor 둘다 빌드가 되는 이유는 아직 찾지 못했다고 한다 [참조](https://code.google.com/p/android/issues/detail?id=52962))
 
 [참고 링크1](https://developer.android.com/studio/projects?hl=ko)  
-[참고 링크2](https://www.youtube.com/watch?v=H4qh0n9Zu5k)
+[참고 링크2](https://www.youtube.com/watch?v=H4qh0n9Zu5k)  
+[참고 링크3](https://www.freecodecamp.org/news/how-modularisation-affects-build-time-of-an-android-application-43a984ce9968)  
+[참고 링크4](https://footcode.postype.com/post/3673100)
