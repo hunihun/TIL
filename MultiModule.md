@@ -1,4 +1,3 @@
-
 # Multi Module
 
 ###  - 모듈이란?
@@ -33,11 +32,23 @@
  * 장점  
     1. 코드의 재사용성 증가
     2. 빌드시간 단축
-   
 
+1. 코드의 재사용성 증가
 
+![이미지](image/multimodule/before.png)
 
+- 위와같은 경우에는 일반적인 동작에는 전혀 문제가 없다. 하지만 A 모듈에서 사용하고있는 CustomView 에서 오류가 발생했다면 A 모듈의 CustomView 를 수정하면 해결되겠지만 같은 CustomView 를 복사해서 사용하던 B 모듈에서도 동일한 오류가 발생하고있을 것이다. 이런식으로 100개의 모듈에서 CustomView 를 사용하고 있었다면 100개의 CustomView 를 일일이 찾아서 변경해야 한다는것이다.
 
+![이미지2](image/multimodule/after.png)
+
+- CustomView 를 모듈화 하여 위와같이 A, B 모듈에 각각 종속시키게되면 일일이 찾아서 변경할 필요가 없어진다.
+
+1. 빌드시간 단축
+
+![이미지3](https://cdn-media-1.freecodecamp.org/images/JsR7H3b6U9J49HLLY6rV5BCsNnuCQIT0O4rx)
+([출처](https://www.freecodecamp.org/news/how-modularisation-affects-build-time-of-an-android-application-43a984ce9968))
+
+- 15,000개의 클래스를 하나의 Application 모듈에서 빌드했을때와 하나의 Application 모듈과 2개, 4개의 Library 모듈로 나누어 빌드했을때의 시간을 측정한 결과이다. Application 모듈만 변경 후 빌드했을 때 분리가 많이 되어있을수록 짧은 빌드시간을 확인할 수 있다. 하지만 Library 모듈을 변경했을 때 오히려 1분10초 보다 긴 1분 32초가 걸린다. 왜그럴까?
 
 [참고 링크1](https://developer.android.com/studio/projects?hl=ko)  
 [참고 링크2](https://www.youtube.com/watch?v=H4qh0n9Zu5k)
