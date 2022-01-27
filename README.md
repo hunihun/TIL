@@ -10,7 +10,9 @@
 * 공부 리스트
 > [TDD](TDD.md)  
 [Multi Module](https://github.com/hunihun/TIL/blob/main/MultiModule.md)   
-Clean Architecture  
+[Clean Architecture](CleanArchitecture.md)  
 CI/CD    
 Coroutine  
 RxJava  
+Gradle  
+
