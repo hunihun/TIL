@@ -4,7 +4,7 @@
 - 로버트 마틴이 2000년대 초에 명명한 객체지향프로그래밍의 다섯가지 기본 원칙을 마이클 페더스가 원칙의 앞글자를 따서 다시 SOLID라는 이름으로 소개한 것
 
 ### 원칙이란 ?
-![이미지1](image/SOLID/priciple.png)
+![이미지1](https://github.com/hunihun/TIL/blob/main/image/SOLID/principle.png)
 
 ### 5가지 원칙
 1. 단일 책임의 원칙(Single Responsibility Principle, SRP)
