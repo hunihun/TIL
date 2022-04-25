@@ -40,8 +40,7 @@
 - 의존관계를 맺을 때 구체적인 클래스보다 인터페이스나 추상 클래스와 관계를 맺어야 한다.
 - 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존해야 한다
 
-### 안드로이드에서 어떻게 적용할까?
-1. 단일 책임의 원칙  
+1. 단일 책임의 원칙
 
 내가 처음 안드로이드 개발을 할때 Activity 안에서 api를 호출하고 응답 데이터를 가공하고 조건에 맞게 화면에 그려주었다. 이때 Activity가 가지고있는 책임은
 
@@ -56,14 +55,23 @@
 V(View): 화면 그리기  
 VM(ViewModel): 비즈니스 로직
 
-이렇게 각각 하나의 책임을 갖게 Class를 나눠주더라도 책임에 대한 이해가 없다면 모양만 MVVM인 형태가 만들어질수 있다.
+각각 하나의 책임을 갖게 Class를 나눠주더라도 책임에 대한 이해가 없다면 모양만 MVVM인 형태가 만들어질수 있다.
 
 2. 개방 폐쇄의 원칙
 
-개방 폐쇄의 원칙은 의존성 주입을 생각하면 된다.  
-나는 Repository class를 사용할때 항상 interface로 000Repository 를 만들고 그 구현체인 000RepositoryImpl을 만든다.  
-그리고 ViewModel에 000Repository를 주입받는다. 그러면 ViewModel은 000Repsoitory의 구현체가 바뀌어도 신경을 쓸 필요가 없다(확장에는 열려있고 변경에는 닫혀있다)
+개방 폐쇄의 원칙은 의존성 주입을 생각하면 된다. 나는 Repository class를 사용할때 항상 interface로 000Repository 를 만들고 그 구현체인 000RepositoryImpl을 만든다. 그리고 ViewModel에 000Repository를 주입받는다. 그러면 ViewModel은 
+000Repsoitory의 구현체가 바뀌어도 신경을 쓸 필요가 없다(확장에는 열려있고 변경에는 닫혀있다)
+
+3. 리스코브 치환의 원칙
+
+4. 인터페이스 분리의 원칙
+
+인터페이스 분리의 원칙은 단일 책임의 원칙과 매우 유사하다고 생각한다.  
+안드로이드의 View class 내부의 clickListener interface들(OnClickListener, OnLongClickListener)이 인터페이스 분리의 원칙을 잘 지킨 예라고 생각한다.
+
+5. 의존성 역전의 원칙
+
+
 
 [참고 링크1](https://devlog-wjdrbs96.tistory.com/380#recentEntries)  
 [참고 링크2](https://jaeyeong951.medium.com/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-5%EC%9B%90%EC%B9%99-solid-ac7d4d660f4d)  
-
