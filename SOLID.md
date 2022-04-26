@@ -71,7 +71,7 @@ VM(ViewModel): 비즈니스 로직
 
 5. 의존성 역전의 원칙
 
-
+의존성 역전의 원칙은 쉽게 말해서 인터페이스를 잘쓰고 추상화를 잘하자 라는 느낌이다...
 
 [참고 링크1](https://devlog-wjdrbs96.tistory.com/380#recentEntries)  
 [참고 링크2](https://jaeyeong951.medium.com/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-5%EC%9B%90%EC%B9%99-solid-ac7d4d660f4d)  
