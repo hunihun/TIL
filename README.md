@@ -12,6 +12,7 @@
 [Multi Module](https://github.com/hunihun/TIL/blob/main/MultiModule.md)   
 [Clean Architecture](CleanArchitecture.md)  
 [SOLID](SOLID.md)  
+[Hilt](Hilt.md)
 Coroutine  
 RxJava  
 CI/CD    
